@@ -1,5 +1,6 @@
 const btnSubmit = document.querySelector('#btn_submit');
-console.log(btnSubmit);
+
+const btnReset = document.querySelector('#btn_reset');
 
 const priceKm = 0.21;
 const discountUnder18 = 0.8;
@@ -10,16 +11,17 @@ let ticketPrice = document.getElementById('ticket_price');
 btnSubmit.addEventListener('click',
 function()
 {
-    let distance = document.getElementById('distance').value;
-    console.log(distance);
+    const distance = document.getElementById('distance').value;
 
-    let age = document.getElementById('age').value;
-    console.log(age);
+    const age = document.getElementById('age').value;
     
-    let name = document.getElementById('name').value;
-    console.log(name);
+    const name = document.getElementById('name').value;
     
     document.getElementById('ticket_name').innerHTML = name
+    
+    const trainTicket = document.getElementById('train_ticket');
+    trainTicket.classList.remove('d-none')
+    
     
     if (age === 'over_65')
     {
@@ -40,4 +42,20 @@ function()
     }
     
     
+});
+
+btnReset.addEventListener('click',
+function()
+
+
+{
+    const distance = document.getElementById('distance').value = '';
+
+    const age = document.getElementById('age').value = '';
+    
+    const name = document.getElementById('name').value = '';
+
+    const trainTicket = document.getElementById('train_ticket');
+    trainTicket.classList.toggle('d-none')
+
 });
