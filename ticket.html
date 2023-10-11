@@ -28,8 +28,15 @@
 <main class="bg-gradient bg-primary vh-100">
   
     <div class="container-fluid p-5">
-      <div class="card text-center p-3 m-auto">
-        <div class="row">
+
+      <!-- ticket generator -->
+      <div class="card text-center m-auto">
+
+        <div class="card-header text-uppercase fw-bold fs-4">
+          <span>Calcola il prezzo del biglietto</span>
+        </div>
+      
+        <div class="card-body row">
           <div class="col-4">
             <label for="name" class="mb-2">Nome Cognome</label>
             <input type="text" class="form-control text-center" value="" name="name" id="name" aria-describedby="basic-addon3 basic-addon4">
@@ -47,19 +54,41 @@
                 <option value="over_65">Over 65</option>
               </select>          
             </div>
-        </div>
+
+            <div class="mt-4">
+              <button class="btn btn-primary" id="btn_submit">Genera</button>
+              <button class="btn btn-danger">Annulla</button>
+            </div>
+
+          </div>
   
-        <div class="mt-5">
-          <button class="btn btn-primary" id="btn_submit">Genera</button>
-          <button class="btn btn-danger">Annulla</button>
-        </div>
 
       </div>
 
-      <div class="card mt-5 m-auto">
-        <span id="ticket_name">aaa</span>
-        <span id="ticket_discount">aaaa</span>
-        <span id="ticket_price">aaaa</span>
+      <!-- train ticket -->
+      <div class="card rounded-4 mt-5 m-auto">
+
+        <div class="card-header text-uppercase fw-bold fs-4 px-4">
+          <span>Railway ticket</span>
+        </div>
+
+        <div class="card-body px-4 text-uppercase row">
+          
+          <p class="col-3">Name: </p>
+          <span class="col-5" id="ticket_name">aaa</span>
+          <p class="col-2">Carriage n°: </p>
+          <span class="col-2" id="carriage">aaa</span>
+
+          <p class="col-3">Ticket type: </p>
+          <span class="col-5" id="ticket_discount">aaa</span>
+          <p class="col-2">Seat: </p>
+          <span class="col-2" id="seat">aaa</span>
+
+          <p class="col-3">Price: </p>
+          <span class="col-5" id="ticket_price">aaa</span>
+          <p class="col-2">Date: </p>
+          <span class="col-2" id="date">aaa</span>
+        </div>
 
 
       </div>
